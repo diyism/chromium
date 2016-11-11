@@ -1,7 +1,9 @@
+sudo: required
+dist: trusty
+
 language: cpp
 compiler:
     - gcc
-    - clang
 
 branches:
     only:
@@ -15,5 +17,7 @@ before_install:
     - sudo apt-get --yes install g++-4.8
     - if [ "$CXX" == "g++" ]; then export CXX=g++-4.8; fi
     - sudo apt-get --yes install ninja-build
+    - sudo ./build/install-build-deps.sh
+    - gclient runhooks
 
-script: ./bootstrap.py --cxx=$CXX && ninja
+script: ninja -C out/Release chrome
