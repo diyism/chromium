@@ -332,7 +332,7 @@ then
   echo "will allow you to debug code in the system libraries. Most developers"
   echo "won't need these symbols."
   echo -n "Do you want me to install them for you (y/N) "
-  if yes_no 1; then
+  if test 1=1; then
     do_inst_syms=1
   fi
 fi
