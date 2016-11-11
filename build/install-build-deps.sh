@@ -175,7 +175,7 @@ case $lsb_release in
 esac
 
 # Packages to build NaCl, its toolchains, and its ports.
-naclports_list="ant autoconf bison cmake gawk intltool xutils-dev xsltproc"
+naclports_list="ant autoconf bison cmake intltool xutils-dev xsltproc"
 nacl_list="g++-mingw-w64-i686 lib32z1-dev
            libasound2:i386 libcap2:i386 libelf-dev:i386 libfontconfig1:i386
            libgconf-2-4:i386 libglib2.0-0:i386 libgpm2:i386 libgtk2.0-0:i386
