@@ -15,6 +15,10 @@ before_install:
     - sudo apt-get --yes install ninja-build
     - sudo ./build/install-build-deps.sh
     - git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
-    - ./depot_tools/gclient runhooks
+    - mkdir chromium
+    - cd chromium
+    - fetch --nohooks --no-history chromium
+    - cd src
+    - ../../depot_tools/gclient runhooks
 
 script: ninja -C out/Release chrome
