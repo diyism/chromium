@@ -17,7 +17,7 @@ before_install:
     - git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
     - mkdir chromium
     - cd chromium
-    - ../depot_tools/fetch --nohooks --no-history chromium
+    - ../depot_tools/fetch --nohooks --no-history chromium    #../depot_tools/gclient sync --nohooks --no-history
     - cd src
     - ../../depot_tools/gclient runhooks
 
